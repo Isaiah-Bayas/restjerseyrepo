@@ -59,10 +59,13 @@ public class TodosResource {
 	}
 	
 	// TODO: Supply the annotation for a POST request
+	@POST
 	// TODO: Supply the annotation so that the client passes a JSON
 	//       object in the body of the POST request
+	@Consumes(MediaType.APPLICATION_JSON)
 	// TODO: Supply the annotation so that the Todo returned by
 	//       this method is converted to a JSON object
+	@Produces(MediaType.APPLICATION_JSON)
 	// To test: http://localhost:9090/morehouse/restapp/todos
 	// HTTP method: POST
 	// Body:  {"title":"Of Mice and Men", "status":"IN", "dueDate":"2018-02-12", "comment":"checked-in ontime", "assignee":"Jimmy Wong"}
