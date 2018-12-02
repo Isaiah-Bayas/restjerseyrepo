@@ -42,11 +42,14 @@ public class TodosResource {
 	}
 	
 	// TODO: Supply the annotation for a GET request
+	@GET
 	// TODO: Supply the path annotation so that the todo id 
 	//       can be passed as parameter in the URL
+	@Path("/{id}")
 	// TODO: Supply the annotation so that the Todo returned by
 	//       this method is converted to either JSON or XML, 
 	//       depending on client request. 
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	// To test: http://localhost:9090/morehouse/restapp/todos/1
 	//   HTTP method: GET
 	// Headers:
@@ -84,10 +87,13 @@ public class TodosResource {
 	}
 	
 	// TODO: Supply the annotation for a PUT request
+	@PUT
 	// TODO: Supply the annotation so that the client passes a JSON
 	//       object in the body of the PUT request
+	@Consumes(MediaType.APPLICATION_JSON)
 	// TODO: Supply the annotation so that the Todo returned by
 	//       this method is converted to a JSON object
+	@Produces(MediaType.APPLICATION_JSON)
 	// To test: http://localhost:9090/morehouse/restapp/todos
 	// HTTP method: PUT
 	// Body:  {"id":8, "title":"Of Mice and Men", "status":"IN", "dueDate":"2018-03-17", "comment":"checked-in ontime", "assignee":"Dana Robinson"}
@@ -105,10 +111,13 @@ public class TodosResource {
 	}
 	
 	// TODO: Supply the annotation for a DELETE request
+	@DELETE
     // TODO: Supply the path annotation so that the todo id 
 	//       can be passed as parameter in the URL
+	@Path("/{id}")
 	// TODO: Supply the annotation so that the Todo returned by
 	//       this method is converted to a JSON object
+	@Produces(MediaType.APPLICATION_JSON)
 	// To test: http://localhost:9090/morehouse/restapp/todos/<todo id>
 	// HTTP method: DELETE
 	// Headers:
